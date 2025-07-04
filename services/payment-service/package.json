@@ -1,0 +1,45 @@
+{
+  "name": "@repo/payment-service",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "with-env": "dotenv --",
+    "start": "NODE_ENV=prod pm2 start ./dist/server.js -i max --attach --watch",
+    "stop": "pm2 stop all",
+    "delete": "pm2 delete all",
+    "build": "tsc --project tsconfig.json",
+    "check-types": "tsc --noEmit",
+    "dev": "NODE_ENV=dev tsc && node ./dist/server.js",
+    "test": "NODE_ENV=test jest --coverage=true -w=1 --forceExit --detectOpenHandles --watchAll=false"
+  },
+  "jest": {
+    "preset": "@repo/jest-presets/node"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/jest-presets": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.7.5",
+    "@types/supertest": "^6.0.3",
+    "dotenv-cli": "^8.0.0",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.1.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@repo/lib": "workspace:*",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "joi": "^17.13.3",
+    "mongoose": "^8.15.1",
+    "pm2": "^6.0.6",
+    "stripe": "^18.3.0",
+    "uuid": "^10.0.0"
+  }
+}

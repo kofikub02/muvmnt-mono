@@ -2,11 +2,14 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
   "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
     "plugins": [{ "name": "next" }],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "allowJs": true,
     "jsx": "preserve",
-    "noEmit": true
+    "noEmit": true,
+    "moduleDetection": "force",
   }
 }

@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+
+# Environment files
+.env
+.env.*
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Coverage directory
+coverage/
+
+# Mac files
+.DS_Store
+
+# npm package files
+*.tgz
+
+# prisma migrations
+prisma/migrations
+
+# Docker files
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# git
+.git
+.gitignore
